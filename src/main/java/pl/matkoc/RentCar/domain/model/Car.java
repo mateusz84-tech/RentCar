@@ -1,4 +1,4 @@
-package pl.matkoc.RentCar.domain;
+package pl.matkoc.RentCar.domain.model;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
