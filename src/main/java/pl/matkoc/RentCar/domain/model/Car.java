@@ -27,7 +27,7 @@ public class Car extends ParentEntity {
     private Integer km_traveled;
     @Column(nullable = false)
     private String status;
-    @Column(nullable = false)
+    @Column(nullable = false, scale=2, precision = 5)
     private Double price_per_day;
 
 }
