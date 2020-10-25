@@ -31,4 +31,8 @@ public class CarRental extends ParentEntity{
     @OneToMany
     @JoinColumn(name = "id_rental")
     private Set<Customer> customers = new HashSet<>();
+
+    @OneToMany
+    @JoinColumn(name = "id_rental")
+    private Set<Reservation> reservations = new HashSet<>();
 }
