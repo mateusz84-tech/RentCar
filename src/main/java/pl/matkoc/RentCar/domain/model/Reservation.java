@@ -1,9 +1,14 @@
 package pl.matkoc.RentCar.domain.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.*;
 
 @Entity
 @Table(name = "reservations")
+@Getter @Setter @ToString(callSuper = true)
 public class Reservation extends ParentEntity{
 
     private String date_reserve;
