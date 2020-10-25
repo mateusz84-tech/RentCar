@@ -1,5 +1,9 @@
 package pl.matkoc.RentCar.domain.model;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
 import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -8,6 +12,7 @@ import java.util.Set;
 
 @Entity
 @Table(name = "rental")
+@Getter @Setter @ToString(callSuper = true)
 public class CarRental extends ParentEntity{
 
     @Column(nullable = false)
