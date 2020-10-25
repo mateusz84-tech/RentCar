@@ -16,10 +16,10 @@ public class CarRental extends ParentEntity{
     private String address;
 
     @OneToMany
-    @JoinColumn(name = "employee_id")
+    @JoinColumn(name = "id_rental")
     private Set<Employee> employee = new HashSet<>();
 
     @OneToMany
-    @JoinColumn(name = "car_id")
+    @JoinColumn(name = "id_rental")
     private List<Car> car = new ArrayList<>();
 }
