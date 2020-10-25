@@ -13,12 +13,12 @@ import javax.persistence.*;
 public class Return extends ParentEntity {
 
     @OneToOne
-    @JoinColumn(name = "id_return")
+    @JoinColumn(name = "id_employee")
     private Employee employee;
     @Column(nullable = false)
     private String returnCar;
     @OneToOne
-    @JoinColumn(name = "id_return")
+    @JoinColumn(name = "id_reservation")
     private Reservation reservation;
     @Column(nullable = true, scale = 2, precision = 5)
     private Double additionalPayment;
