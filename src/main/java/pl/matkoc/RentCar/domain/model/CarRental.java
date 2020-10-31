@@ -16,6 +16,8 @@ import java.util.Set;
 public class CarRental extends ParentEntity{
 
     @Column(nullable = false)
+    private String name;
+    @Column(nullable = false)
     private String city;
     @Column(nullable = false)
     private String address;
