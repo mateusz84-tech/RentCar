@@ -3,7 +3,6 @@ package pl.matkoc.RentCar.domain.model;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import org.hibernate.annotations.Parent;
 
 import javax.persistence.*;
 
