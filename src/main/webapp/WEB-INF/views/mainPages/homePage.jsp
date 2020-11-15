@@ -49,6 +49,7 @@
                     <td>${listRent.name}</td>
                     <td>${listRent.city}</td>
                     <td>${listRent.address}</td>
+                    <td><a href="${pageContext.request.contextPath}/rent/getCarRent?id=${listRent.id}">Wybierz</a></td>
                     <td></td>
                 </tr>
             </c:forEach>
