@@ -16,27 +16,34 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 </head>
 <body>
-<h2>Witaj na stonie wypożyczalni</h2>
-<form:form method="post" modelAttribute="rent">
-    <div calss="field">
-    <form:label path="name">Nazwa Wypożyczalni</form:label>
-        <div class="control">
-            <form:input path="name"/>
-        </div>
-    </div>
-    <div class="field">
-        <form:label path="city">Miasto</form:label>
-        <div class="control">
-            <form:input path="city"/>
-        </div>
-    </div>
-    <div class="field">
-        <form:label path="address">Ulica</form:label>
-            <div class="control">
-                <form:input path="address"/><br/>
+<h2 class="has-text-centered">Witaj na stonie wypożyczalni</h2><br/>
+<h2 class="has-text-centered">Utwórz nową wypożyczalnie</h2><br/>
+<section class="has-text-centered" >
+<div class="container">
+        <form:form method="post" modelAttribute="rent">
+            <div class="field">
+                <div class="control">
+                    <form:input path="name" placeholder="Nazwa wypożyczalni"/>
+                </div>
             </div>
-    </div>
-    <form:button>Dodaj</form:button>
-</form:form>
+            <div class="field">
+                <div class="control">
+                    <form:input path="city" placeholder="Miasto"/>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <form:input path="address" placeholder="Adres wypożyczalni"/>
+                </div>
+            </div>
+            <div class="field">
+                <div class="control">
+                    <form:button class="button is-small">Dodaj</form:button>
+                </div>
+            </div>
+        </form:form>
+    <br/>
+</div>
+</section>
 </body>
 </html>
