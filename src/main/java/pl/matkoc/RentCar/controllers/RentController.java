@@ -3,6 +3,7 @@ package pl.matkoc.RentCar.controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.matkoc.RentCar.domain.model.CarRental;
 import pl.matkoc.RentCar.repository.CarRentRepository;
@@ -22,4 +23,10 @@ public class RentController {
         model.addAttribute("rent", new CarRental());
         return "/rent/add";
     }
+    @PostMapping("/add")
+    public String processAddRentCarPage(CarRental carRental){
+        carRentRepository.save(carRental);
+        return "redirect:/";
+    }
+
 }
