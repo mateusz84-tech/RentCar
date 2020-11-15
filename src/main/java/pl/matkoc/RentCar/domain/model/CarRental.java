@@ -22,23 +22,31 @@ public class CarRental extends ParentEntity{
     @Column(nullable = false)
     private String address;
 
-    @OneToMany
+    public CarRental(){
+    }
+
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "id_rental")
+    @Column(nullable = true)
     private Set<Employee> employee = new HashSet<>();
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "id_rental")
+    @Column(nullable = true)
     private List<Car> car = new ArrayList<>();
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.REMOVE)
     @JoinColumn(name = "id_rental")
+    @Column(nullable = true)
     private Set<Customer> customers = new HashSet<>();
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE)
     @JoinColumn(name = "id_rental")
+    @Column(nullable = true)
     private Set<Reservation> reservations = new HashSet<>();
 
-    @OneToMany
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.REMOVE )
     @JoinColumn(name = "id_rental")
+    @Column(nullable = true)
     private Set<Return> returns = new HashSet<>();
 }
