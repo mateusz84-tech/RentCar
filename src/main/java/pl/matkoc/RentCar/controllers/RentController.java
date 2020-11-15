@@ -31,7 +31,7 @@ public class RentController {
     @GetMapping("/getCarRent")
     public String prepareGetCarRentById(Model model, @RequestParam Long id){
         Optional<CarRental> carRental = carRentRepository.findById(id);
-        model.addAttribute("carRentId",carRental);
+        carRental.ifPresent(rental -> model.addAttribute("carRentId", rental));
         return "/rent/showCarRent";
     }
 
