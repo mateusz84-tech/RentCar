@@ -42,6 +42,7 @@
                 <th>Miasto</th>
                 <th>Ulica</th>
                 <th>Wybierz</th>
+                <th>Dodaj pracownika</th>
             </tr>
             <c:forEach items="${rent}" var="listRent" varStatus="step">
                 <tr>
@@ -50,7 +51,7 @@
                     <td>${listRent.city}</td>
                     <td>${listRent.address}</td>
                     <td><a href="${pageContext.request.contextPath}/rent/getCarRent?id=${listRent.id}">Wybierz</a></td>
-                    <td></td>
+                    <td><a href="${pageContext.request.contextPath}/employee/addEmployee">Dodaj</a></td>
                 </tr>
             </c:forEach>
         </table>
