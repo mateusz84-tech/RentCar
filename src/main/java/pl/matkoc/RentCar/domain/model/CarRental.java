@@ -13,7 +13,7 @@ import java.util.Set;
 @Entity
 @Table(name = "rental")
 @Getter @Setter @ToString(callSuper = true)
-public class CarRental extends ParentEntity{
+public class CarRental extends ParentEntity {
 
     @Column(nullable = false)
     private String name;

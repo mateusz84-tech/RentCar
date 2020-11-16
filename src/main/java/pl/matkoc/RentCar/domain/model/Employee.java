@@ -11,7 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "employees")
 @Getter @Setter @ToString(callSuper = true)
-public class Employee extends ParentEntity{
+public class Employee extends ParentEntity {
 
     @Column(nullable = false)
     private String name;

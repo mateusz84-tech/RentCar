@@ -1,3 +1,4 @@
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: user
@@ -23,34 +24,20 @@
         <p>Ulica: ${carRentId.address}</p>
     </div>
 </section>
-<div class="has-text-centered">
-    <div class="hero-buttons">
-        <div class="buttons">
-            <button class="button" style="background-color: goldenrod">
-                <p>Samochody: ${carRentId.car}</p>
-            </button>
-        </div>
-        <div class="buttons">
-            <button class="button" style="background-color: coral">
-                <p>Rezerwacje: ${carRentId.reservations}</p>
-            </button>
-        </div>
-        <div class="buttons">
-            <button class="button" style="background-color: #5498b4">
-                <p>Zwroty: ${carRentId.returns}</p>
-            </button>
-        </div>
-        <div class="buttons">
-            <button class="button" style="background-color: #a773b4">
-                <p>Pracownicy: ${carRentId.employee}</p>
-            </button>
-        </div>
-        <div class="buttons">
-            <button class="button" style="background-color: #3fb447">
-                <p>Klienci: ${carRentId.customers}</p>
-            </button>
+    <div class="has-text-centered">
+        <div class="has-text-centered">
+            <h2 class="has-text-centered">Wybierz pracownika</h2>
+            <form:select path="carRentId">
+                <form:option value="-" label="--Wybierz--"/>
+                <form:options items="${carRentId.employee}"/>
+            </form:select>
         </div>
     </div>
-</div>
+    <br/>
+    <div class="has-text-centered">
+        <button class="button">
+            <a href="/addReservation">Dodaj rezerwację</a>
+        </button>
+    </div>
 </body>
 </html>

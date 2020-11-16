@@ -12,7 +12,7 @@ import javax.persistence.Table;
 @Table(name = "customers")
 @Getter @Setter @ToString(callSuper = true)
 // callSuper = true - odwołanie sie do id z klasy rodzica
-public class Customer extends ParentEntity{
+public class Customer extends ParentEntity {
 
     @Column(nullable = false)
     private String name;
