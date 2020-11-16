@@ -34,5 +34,4 @@ public class RentController {
         carRental.ifPresent(rental -> model.addAttribute("carRentId", rental));
         return "/rent/showCarRent";
     }
-
 }
