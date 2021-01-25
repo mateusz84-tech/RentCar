@@ -1,21 +1,24 @@
 package pl.matkoc.RentCar.domain.model;
 
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
-@Table(name = "employees")
-@Getter @Setter @ToString(callSuper = true)
-public class Employee extends ParentEntity {
-
-    @Column(nullable = false)
-    private String name;
-    @Column(nullable = false)
+@Table(name = "employee")
+@Getter @Setter @EqualsAndHashCode @ToString
+public class Employee {
+    @Id@GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
+    private String firstName;
     private String lastName;
+    private String workStation;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_branch_company")
+    private BranchOfCompany branchOfCompany;
 
 }
