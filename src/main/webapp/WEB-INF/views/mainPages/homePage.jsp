@@ -26,16 +26,16 @@
 <br/>
 <div class="container">
     <div class="has-text-centered">
-        <h2><a href="${pageContext.request.contextPath}/rent/add">Dodaj wypożyczalnie</a> </h2>
+        <h2><a href="${pageContext.request.contextPath}/branch/add">Dodaj nowy oddział</a> </h2>
     </div>
 </div>
 <br/>
 <div class="has-text-centered">
     <p class="has-background-grey-light">Lista wypożyczalni</p>
 </div>
-<div class="has-text-centered">
+<div>
     <div class="table-container">
-        <table class="table">
+        <table class="table" align="center">
             <tr>
                 <th>Lp.</th>
                 <th>Nazwa Wypożyczalni</th>

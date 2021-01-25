@@ -7,7 +7,6 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 @Table(name = "car_rent")
@@ -21,6 +20,6 @@ public class CarRent {
     private String owner;
 
     @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_branch_company")
+    @JoinColumn(name = "id_car_rent")
     private List<BranchOfCompany> branchOfCompany;
 }
