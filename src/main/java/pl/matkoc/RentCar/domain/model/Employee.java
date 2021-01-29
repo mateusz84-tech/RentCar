@@ -17,8 +17,8 @@ public class Employee {
     private String lastName;
     private String workStation;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_branch_company")
+    @ManyToOne
+    @JoinColumn(name = "id_company", updatable = false, insertable = false)
     private BranchOfCompany branchOfCompany;
 
 }

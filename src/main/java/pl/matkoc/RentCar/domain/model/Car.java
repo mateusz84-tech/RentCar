@@ -23,4 +23,8 @@ public class Car {
     private int mileage;
     private String status;
     private BigDecimal amountRentedPerDay;
+
+    @ManyToOne
+    @JoinColumn(name = "company_id", updatable = false, insertable = false)
+    private BranchOfCompany company;
 }

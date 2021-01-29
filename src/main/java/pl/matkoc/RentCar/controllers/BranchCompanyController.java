@@ -32,6 +32,6 @@ public class BranchCompanyController {
         logger.info("Przed zapisem: {}",getClass());
         branchCompanyRepository.save(branchOfCompany);
         logger.info("Po zapisie: {}",getClass());
-        return "mainPages/homePage";
+        return "redirect:/";
     }
 }

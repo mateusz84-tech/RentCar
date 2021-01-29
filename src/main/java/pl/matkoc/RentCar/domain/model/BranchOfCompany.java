@@ -4,8 +4,11 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
+import org.hibernate.mapping.Bag;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
@@ -21,11 +24,15 @@ public class BranchOfCompany {
     private String city;
     private String zipCode;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "branchOfCompany")
-    private Set<Employee> employee;
+    @OneToMany
+    @JoinColumn(name = "company_id",
+                nullable = false)
+    @OrderColumn(name = "employee_position", nullable = false)
+    private Set<Employee> employees = new HashSet<>();
 
-
-    @OneToMany(fetch = FetchType.LAZY)
-    @JoinColumn(name = "id_car")
-    private List<Car> cars;
+    @OneToMany
+    @JoinColumn(name = "company_id",
+                nullable = false)
+    @OrderColumn(name = "car_position", nullable = false)
+    private List<Car> cars = new ArrayList<>();
 }

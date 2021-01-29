@@ -20,7 +20,7 @@
 <h2 class="has-text-centered">Utwórz nową wypożyczalnie</h2><br/>
 <section class="has-text-centered" >
 <div class="container">
-        <form:form method="post" modelAttribute="rent">
+        <form:form method="post" modelAttribute="newBranch">
             <div class="field">
                 <div class="control">
                     <form:input path="name" placeholder="Nazwa wypożyczalni"/>

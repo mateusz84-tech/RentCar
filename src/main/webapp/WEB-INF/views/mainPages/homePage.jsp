@@ -41,17 +41,17 @@
                 <th>Nazwa Wypożyczalni</th>
                 <th>Miasto</th>
                 <th>Ulica</th>
+                <th>Kod pocztowy</th>
                 <th>Wybierz</th>
-                <th>Dodaj pracownika</th>
             </tr>
-            <c:forEach items="${rent}" var="listRent" varStatus="step">
+            <c:forEach items="${allBranch}" var="listRent" varStatus="step">
                 <tr>
                     <td>${step.count}</td>
                     <td>${listRent.name}</td>
                     <td>${listRent.city}</td>
-                    <td>${listRent.address}</td>
+                    <td>${listRent.street}</td>
+                    <td>${listRent.zipCode}</td>
                     <td><a href="${pageContext.request.contextPath}/rent/getCarRent?id=${listRent.id}">Wybierz</a></td>
-                    <td><a href="${pageContext.request.contextPath}/employee/addEmployee">Dodaj</a></td>
                 </tr>
             </c:forEach>
         </table>

@@ -21,6 +21,12 @@
 <section class="has-text-centered">
         <form:form method="post" modelAttribute="newBranch">
             <div>
+                <form:label path="name">Nazwa</form:label>
+            </div>
+            <div>
+                <form:input path="name"/>
+            </div>
+            <div>
                 <form:label path="street">Ulica</form:label>
             </div>
             <div>
@@ -39,7 +45,7 @@
                 <form:input path="zipCode"/>
             </div>
             <br/>
-            <button class="button is-primary">Utwórz nowy oddział</button>
+            <form:button>Dodaj</form:button>
         </form:form>
 </section>
 
