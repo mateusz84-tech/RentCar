@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/bulma/0.9.1/css/bulma.min.css">
     <script defer src="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/js/all.min.js"></script>
 </head>
-<body>
+<body style="background: linear-gradient(lightcyan,lightcyan)">
 <div align="center" class="container">
     <div class="field">
         <h2>Witaj w wypożyczalni samochodów</h2>
@@ -35,13 +35,15 @@
 </div>
 <div>
     <div class="table-container">
-        <table class="table" align="center">
+        <table class="table" align="center" style="background: lightcyan">
             <tr>
                 <th>Lp.</th>
                 <th>Nazwa Wypożyczalni</th>
                 <th>Miasto</th>
                 <th>Ulica</th>
                 <th>Kod pocztowy</th>
+                <th>Pracownicy</th>
+                <th>Auta</th>
                 <th>Wybierz</th>
             </tr>
             <c:forEach items="${allBranch}" var="listRent" varStatus="step">
@@ -51,6 +53,8 @@
                     <td>${listRent.city}</td>
                     <td>${listRent.street}</td>
                     <td>${listRent.zipCode}</td>
+                    <td>${listRent.employees}</td>
+                    <td>${listRent.cars}</td>
                     <td><a href="${pageContext.request.contextPath}/rent/getCarRent?id=${listRent.id}">Wybierz</a></td>
                 </tr>
             </c:forEach>
