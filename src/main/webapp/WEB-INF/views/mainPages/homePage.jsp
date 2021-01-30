@@ -31,7 +31,7 @@
 </div>
 <br/>
 <div class="has-text-centered">
-    <p class="has-background-grey-light">Lista wypożyczalni</p>
+    <p class="has-background-grey-light">Lista oddziałów wypożyczalni</p>
 </div>
 <div>
     <div class="table-container">
