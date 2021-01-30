@@ -25,6 +25,6 @@ public class Car {
     private BigDecimal amountRentedPerDay;
 
     @ManyToOne
-    @JoinColumn(name = "company_id", updatable = false, insertable = false)
+    @JoinColumn(name = "company_id", nullable = false)
     private BranchOfCompany company;
 }

@@ -42,8 +42,8 @@
                 <th>Miasto</th>
                 <th>Ulica</th>
                 <th>Kod pocztowy</th>
-                <th>Pracownicy</th>
-                <th>Auta</th>
+<%--                <th>Pracownicy</th>--%>
+<%--                <th>Auta</th>--%>
                 <th>Wybierz</th>
             </tr>
             <c:forEach items="${allBranch}" var="listRent" varStatus="step">
@@ -53,8 +53,8 @@
                     <td>${listRent.city}</td>
                     <td>${listRent.street}</td>
                     <td>${listRent.zipCode}</td>
-                    <td>${listRent.employees}</td>
-                    <td>${listRent.cars}</td>
+<%--                    <td>${listRent.employees}</td>--%>
+<%--                    <td>${listRent.cars}</td>--%>
                     <td><a href="${pageContext.request.contextPath}/rent/getCarRent?id=${listRent.id}">Wybierz</a></td>
                 </tr>
             </c:forEach>

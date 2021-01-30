@@ -36,6 +36,12 @@
             <form:input path="workStation" placeholder="Stanowisko"/>
         </div>
     </div>
+    <div calss="field">
+        <div class="control">
+            Wybierz oddział: <form:select path="branchOfCompany" items="${companyList}" itemValue="id" itemLabel="name"/>
+        </div>
+    </div>
+    <br/>
     <div class="field">
         <div class="control">
             <form:button class="button is-small">Dodaj</form:button>

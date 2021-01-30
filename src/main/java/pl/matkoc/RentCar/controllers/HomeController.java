@@ -19,7 +19,7 @@ public class HomeController {
     //
     @GetMapping
     public String showHomePage(Model model){
-        model.addAttribute("allBranch",branchCompanyRepository.findBranchOfCompany());
+        model.addAttribute("allBranch",branchCompanyRepository.findAll());
         return "/mainPages/homePage";
     }
 

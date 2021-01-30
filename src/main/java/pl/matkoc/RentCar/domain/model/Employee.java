@@ -18,7 +18,7 @@ public class Employee {
     private String workStation;
 
     @ManyToOne
-    @JoinColumn(name = "id_company", updatable = false, insertable = false)
+    @JoinColumn(name = "company_id", nullable = false)
     private BranchOfCompany branchOfCompany;
 
 }
