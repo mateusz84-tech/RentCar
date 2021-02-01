@@ -1,5 +1,6 @@
 package pl.matkoc.RentCar.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import pl.matkoc.RentCar.domain.model.BranchOfCompany;
 import java.util.List;
 
@@ -13,4 +14,9 @@ public interface BranchCompanyRepository extends JpaRepository<BranchOfCompany, 
 
     @Override
     List<BranchOfCompany> findAll();
+
+    @Query("SELECT bc FROM BranchOfCompany bc WHERE bc.id= :id")
+    BranchOfCompany findCompanyById(Long id);
+
+
 }
