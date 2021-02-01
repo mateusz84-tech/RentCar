@@ -27,11 +27,14 @@ public class HomeController {
         model.addAttribute("rentals",branchCompanyRepository.findAll());
         return "/mainPages/homePage";
     }
-    // todo opczaić optionale
     @GetMapping("/rent/getCarRent")
     public ModelAndView showToChoseRent(Long id){
         ModelAndView modelAndView = new ModelAndView();
         BranchOfCompany companyIdDB = branchCompanyRepository.findCompanyById(id);
+        if(companyIdDB == null){
+            modelAndView.setStatus(HttpStatus.NOT_FOUND);
+            return modelAndView;
+        }
         modelAndView.getModelMap().addAttribute("company",companyIdDB);
         modelAndView.setViewName("/rent/showCarRent");
         return modelAndView;
