@@ -1,0 +1,14 @@
+body{
+    background: linear-gradient(right,#c1f3f3, #fed4ff);
+}
+h2, tr,th,td,p{
+    color: darkmagenta;
+    font-family: Purisa, fantasy;
+    font-size: large;
+}
+.displayImg{
+    margin-left: 35px;
+    margin-right: 35px;
+    width: 25px;
+    height: 25px;
+}

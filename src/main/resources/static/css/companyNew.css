@@ -1,0 +1,33 @@
+header, footer{
+    display: block;
+    background: linear-gradient(right,coral,orange);
+    border-bottom-style: double;
+    padding: 20px;
+}
+header{
+    height: 160px;
+}
+h1{
+    font-size: 64px;
+    color:lightseagreen;
+    text-align: center;
+    padding: 20px;
+    font-weight: bolder;
+}
+div{
+    font-size: larger;
+    color: lightseagreen;
+    font-family: Purisa, fantasy;
+    padding: 7px;
+}
+p{
+    font-size: xx-large;
+    color: orangered;
+    font-family: Purisa, fantasy;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+}
+div.buttonCs{
+    width: 55px;
+}
