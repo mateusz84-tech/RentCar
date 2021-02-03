@@ -15,10 +15,16 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="../../css/companyNew.css" rel="stylesheet" type="text/css">
 </head>
 </head>
 <body>
-<section class="has-text-centered">
+<div>
+    <header>
+        <h1>Wypożyczalnia samochodów</h1>
+    </header><br/><br>
+    <p>Stwórz nowy oddział</p>
+    <section class="has-text-centered">
         <form:form method="post" modelAttribute="newBranch">
             <div>
                 <form:label path="name">Nazwa</form:label>
@@ -45,9 +51,12 @@
                 <form:input path="zipCode"/>
             </div>
             <br/>
-            <form:button>Dodaj</form:button>
+            <div>
+                <input  class="button is-primary" type="submit" value="Dodaj"/>
+            </div>
         </form:form>
 </section>
+</div>
 
 </body>
 </html>

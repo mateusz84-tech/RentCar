@@ -13,16 +13,19 @@
 <head>
     <title>Strona główna</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/bulma/0.9.1/css/bulma.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fot">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/webjars/bulma/0.9.1/css/bulma.min.css" type="text/css">
     <script defer src="${pageContext.request.contextPath}/webjars/font-awesome/5.15.1/js/all.min.js"></script>
+    <link href="../../css/homePage.css" type="text/css" rel="stylesheet">
+
 </head>
-<body style="background: linear-gradient(lightcyan,lightcyan)">
+<body>
 <div align="center" class="container">
-    <div class="field">
+    <div>
         <h2>Witaj w wypożyczalni samochodów</h2>
     </div>
 </div>
+
 <br/>
 <div class="container">
     <div class="has-text-centered">
@@ -42,24 +45,26 @@
                 <th>Miasto</th>
                 <th>Ulica</th>
                 <th>Kod pocztowy</th>
-<%--                <th>Pracownicy</th>--%>
-<%--                <th>Auta</th>--%>
                 <th>Wybierz</th>
             </tr>
-            <c:forEach items="${allBranch}" var="listRent" varStatus="step">
+            <c:forEach items="${rentals}" var="rental" varStatus="step">
                 <tr>
                     <td>${step.count}</td>
-                    <td>${listRent.name}</td>
-                    <td>${listRent.city}</td>
-                    <td>${listRent.street}</td>
-                    <td>${listRent.zipCode}</td>
-<%--                    <td>${listRent.employees}</td>--%>
-<%--                    <td>${listRent.cars}</td>--%>
-                    <td><a href="${pageContext.request.contextPath}/rent/getCarRent?id=${listRent.id}">Wybierz</a></td>
+                    <td>${rental.name}</td>
+                    <td>${rental.city}</td>
+                    <td>${rental.street}</td>
+                    <td>${rental.zipCode}</td>
+                    <td>
+                        <c:url value="/rent/getCarRent" var="choseURL">
+                            <c:param name="id" value="${rental.id}"/>
+                        </c:url>
+                        <a href="${choseURL}">Wybierz</a>
+                    </td>
                 </tr>
             </c:forEach>
         </table>
     </div>
 </div>
+
 </body>
 </html>
