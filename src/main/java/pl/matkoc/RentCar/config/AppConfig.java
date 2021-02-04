@@ -3,9 +3,11 @@ package pl.matkoc.RentCar.config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.LocaleContextResolver;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 
+import javax.validation.Validator;
 import java.util.Locale;
 
 // klas konfiguracyjna do korzystania ze Spring Data
@@ -21,5 +23,12 @@ public class AppConfig {
         SessionLocaleResolver localeResolver = new SessionLocaleResolver();
         localeResolver.setDefaultLocale(new Locale("pl","PL"));
         return localeResolver;
+    }
+
+    // aby można było wstrzykiwać validator do kontrolerów
+    @Bean
+    public Validator validator(){
+        LocalValidatorFactoryBean validationFactory = new LocalValidatorFactoryBean();
+        return validationFactory;
     }
 }
