@@ -31,3 +31,10 @@ p{
 div.buttonCs{
     width: 55px;
 }
+/* do wyświetlana błędów walidacji domyślnie wyświetlane są w spanie*/
+span{
+    color:red;
+    font-family: V, serif;
+    font-size: 12px;
+    font-weight: bold;
+}
