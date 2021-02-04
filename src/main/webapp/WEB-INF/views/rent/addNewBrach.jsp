@@ -30,25 +30,29 @@
                 <form:label path="name">Nazwa</form:label>
             </div>
             <div>
-                <form:input path="name"/>
+                <form:input path="name"/><br>
+                <form:errors path="name" cssClass="error"/>
             </div>
             <div>
                 <form:label path="street">Ulica</form:label>
             </div>
             <div>
-                <form:input path="street"/>
+                <form:input path="street"/><br>
+                <form:errors path="street" cssClass="error"/>
             </div>
             <div>
                 <form:label path="city">Miasto</form:label>
             </div>
             <div>
-                <form:input path="city"/>
+                <form:input path="city"/><br>
+                <form:errors path="city" cssClass="error"/>
             </div>
             <div>
                 <form:label path="zipCode">Kod Pocztowy</form:label>
             </div>
             <div>
-                <form:input path="zipCode"/>
+                <form:input path="zipCode"/><br>
+                <form:errors path="zipCode" cssClass="error"/>
             </div>
             <br/>
             <div>
