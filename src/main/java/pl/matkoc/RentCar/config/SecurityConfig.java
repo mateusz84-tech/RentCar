@@ -16,11 +16,11 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return new BCryptPasswordEncoder();
     }
 
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.inMemoryAuthentication()
-                .withUser("owner").password("{noop}owner1").roles("OWNER")
-                .and()
-                .withUser("user").password("{noop}user1").roles("USER");
-    }
+//    @Override
+//    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+//        auth.inMemoryAuthentication()
+//                .withUser("owner").password("{noop}owner1").roles("OWNER")
+//                .and()
+//                .withUser("user").password("{noop}user1").roles("USER");
+//    }
 }
