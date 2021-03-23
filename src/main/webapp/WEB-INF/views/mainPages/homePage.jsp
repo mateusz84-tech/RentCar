@@ -25,7 +25,7 @@
         <a href="${pageContext.request.contextPath}/login">Zaloguj</a>
     </div>
     <div class="container">
-        <a href="${pageContext.request.contextPath}/login/registration">Zarejestruj</a>
+        <a href="${pageContext.request.contextPath}/registration">Zarejestruj</a>
     </div>
 </div>
 <div align="center" class="container">
