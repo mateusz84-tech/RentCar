@@ -1,6 +1,8 @@
 package pl.matkoc.RentCar.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +21,7 @@ public class LoginController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = {"/","/login"}, method = RequestMethod.GET)
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
     public ModelAndView login(){
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("login/login");
@@ -31,7 +33,7 @@ public class LoginController {
         ModelAndView modelAndView = new ModelAndView();
         User user = new User();
         modelAndView.addObject("user",user);
-        modelAndView.setViewName("registration");
+        modelAndView.setViewName("login/registration");
         return modelAndView;
     }
 
@@ -53,6 +55,17 @@ public class LoginController {
             modelANdView.setViewName("login/registration");
         }
         return modelANdView;
+    }
+
+    @GetMapping("/admin/home")
+    public ModelAndView home(){
+        ModelAndView modelAndView = new ModelAndView();
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        User user = userService.findUserByName(authentication.getName());
+        modelAndView.addObject("userName", "Witam " + user.getUserName());
+        modelAndView.addObject("Wiadomość","Dostępne dla admina");
+        modelAndView.setViewName("admin/home");
+        return modelAndView;
     }
 
 }
