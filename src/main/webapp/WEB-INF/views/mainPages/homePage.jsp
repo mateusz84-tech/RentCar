@@ -20,12 +20,19 @@
 
 </head>
 <body>
+<div class="is-family-primary" align="right">
+    <div class="container">
+        <a href="${pageContext.request.contextPath}/login">Zaloguj</a>
+    </div>
+    <div class="container">
+        <a href="${pageContext.request.contextPath}/login/registration">Zarejestruj</a>
+    </div>
+</div>
 <div align="center" class="container">
     <div>
         <h2>Witaj w wypożyczalni samochodów</h2>
     </div>
 </div>
-
 <br/>
 <div class="container">
     <div class="has-text-centered">
